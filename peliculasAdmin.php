@@ -1,3 +1,30 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['usuario'])) {
+    echo '
+      <script>
+        alert("Por favor, debes iniciar sesión");
+        window.location = "index.php";
+      </script>
+    ';
+    session_destroy();
+    die();
+  }
+
+  $isAdmin = $_SESSION['is_admin'];
+
+  // Verificar si el usuario no es un administrador
+  if (!$isAdmin) {
+    echo '
+      <script>
+        alert("Acceso denegado. Debes ser administrador para ver esta página");
+        window.location = "main.php";
+      </script>
+    ';
+    die();
+  }
+?>
+
 <html>
     <head>
         <title>PELICULAS</title>
@@ -13,12 +40,12 @@
         <img src="./imagenes/logopageblank.png" alt="Logo main" class="imglogo">
 
         <div class="topnav" id="myTopnav">
-            <a href="main.html">Inicio</a>
+            <a href="main.php">Inicio</a>
             <a href="series.html">Series</a>
             <a href="estrenos.html">Estrenos</a>
             <a href="populares.html">Más Populares</a>
-            <a href="index.php" class="tableft">Cerrar Sesión
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <a href="php/logout.php" class="tableft">Cerrar Sesión
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
             </a>
             <a href="javascript:void(0);" class="icon" onclick="NavTabResp()">
                 <i class="fa fa-bars"></i>
