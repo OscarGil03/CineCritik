@@ -1,3 +1,22 @@
+<?php
+
+  session_start();
+  if (!isset($_SESSION['usuario'])){
+    echo'
+      <script>
+        alert("Por favor debes iniciar sesión");
+        window.location = "index.php";
+      </script>
+    ';
+    session_destroy();
+    die();
+  }
+
+  $nombreUsuario = $_SESSION['usuario'];
+  $isAdmin = $_SESSION['is_admin'];
+
+?>
+
 <html>
 <head>
 <title>Five Nights at Freddy's</title>
@@ -17,9 +36,20 @@
         <a href="series.html">Series</a>
         <a href="estrenos.html">Estrenos</a>
         <a href="populares.html">Más Populares</a>
+        <a href="milista.html">Mi lista</a>
         <a href="php/logout.php" class="tableft">Cerrar Sesión
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
-          </a>
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+        <a class="tableft">
+            Usuario: <?php echo $nombreUsuario?>
+        </a>
+        <?php
+            // Mostrar elementos adicionales si el usuario es administrador
+            if ($isAdmin) {
+                echo '<a href="peliculasAdmin.php" class="tableft">Modificar Peliculas</a>';
+                echo '<a href="agregarPeliculas.php" class="tableft">Agregar Peliculas</a>';
+            }
+        ?>
         <a href="javascript:void(0);" class="icon" onclick="NavTabResp()">
           <i class="fa fa-bars"></i>
         </a>

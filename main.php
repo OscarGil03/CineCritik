@@ -43,7 +43,7 @@
           <i class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
         <a class="tableft">
-            <?php echo $nombreUsuario?>
+            Usuario: <?php echo $nombreUsuario?>
         </a>
         <?php
             // Mostrar elementos adicionales si el usuario es administrador
@@ -67,7 +67,7 @@
       <div class="seccion-container">
         <div class="pelicula-card">
           <div class="pelicula-image">
-            <a href="semana1.html"><img src="imagenes/fnaf.jpeg" class="pelicula-thumb" alt=""></a>
+            <a href="semana1.php"><img src="imagenes/fnaf.jpeg" class="pelicula-thumb" alt=""></a>
           </div>
           <div class="pelicula-info">
             <h2 class="pelicula-nombre">Five Nights At Freddys</h2>
@@ -147,7 +147,7 @@
       <div class="seccion-container">
         <div class="pelicula-card">
           <div class="pelicula-image">
-            <a href="semana1.html"><img src="imagenes/fnaf.jpeg" class="pelicula-thumb" alt=""></a>
+            <a href="semana1.php"><img src="imagenes/fnaf.jpeg" class="pelicula-thumb" alt=""></a>
                     </div>
           <div class="pelicula-info">
             <h2 class="pelicula-nombre">Five Nights At Freddys</h2>
@@ -227,7 +227,7 @@
       <div class="seccion-container">
         <div class="pelicula-card">
           <div class="pelicula-image">
-            <a href="semana1.html"><img src="imagenes/fnaf.jpeg" class="pelicula-thumb" alt=""></a>
+            <a href="semana1.php"><img src="imagenes/fnaf.jpeg" class="pelicula-thumb" alt=""></a>
                     </div>
           <div class="pelicula-info">
             <h2 class="pelicula-nombre">Five Nights At Freddys</h2>

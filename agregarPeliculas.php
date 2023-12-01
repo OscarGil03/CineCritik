@@ -53,7 +53,7 @@
           <i class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
         <a class="tableft">
-            <?php echo $nombreUsuario?>
+            Usuario: <?php echo $nombreUsuario?>
         </a>
         <?php
             // Mostrar elementos adicionales si el usuario es administrador
