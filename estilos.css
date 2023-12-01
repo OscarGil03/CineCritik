@@ -55,6 +55,10 @@ form .title{
   justify-content: center;
 }
 
+form.login {
+  max-width: 230px; 
+}
+
 form {
   width: 100%;
   display: flex;
@@ -62,7 +66,7 @@ form {
   background: rgb(240, 240, 240);
   text-align: center;
   padding: 30px 50px;
-  max-width: 600px; /* Puedes ajustar este valor según tus preferencias */
+  max-width: 600px; 
   margin: 0 auto;
 }
 

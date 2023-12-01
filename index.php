@@ -24,7 +24,7 @@
         </header>
 
         <div class="cuadro-form">
-            <form action="php/login.php" method="post">
+            <form action="php/login.php" method="post" class="login">
                 <h1 class="title">INICIA SESIÓN</h1>
                 <label for="usuario">
                     <input placeholder="Usuario" type="text" id="usuario" name="usuario">
