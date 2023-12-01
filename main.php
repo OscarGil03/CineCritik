@@ -13,7 +13,6 @@
   }
 
   $nombreUsuario = $_SESSION['usuario'];
-  $idUsuario = $_SESSION['id'];
   $isAdmin = $_SESSION['is_admin'];
 
 ?>

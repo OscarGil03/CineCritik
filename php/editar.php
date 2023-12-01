@@ -1,6 +1,34 @@
 <?php
 include 'config.php';
 
+//Verificacion Inicio de sesion
+session_start();
+  if (!isset($_SESSION['usuario'])) {
+    echo '
+      <script>
+        alert("Por favor, debes iniciar sesión");
+        window.location = "index.php";
+      </script>
+    ';
+    session_destroy();
+    die();
+  }
+
+  $nombreUsuario = $_SESSION['usuario'];
+
+  $isAdmin = $_SESSION['is_admin'];
+
+  // Verificar si el usuario no es un administrador
+  if (!$isAdmin) {
+    echo '
+      <script>
+        alert("Acceso denegado. Debes ser administrador para ver esta página");
+        window.location = "main.php";
+      </script>
+    ';
+    die();
+  }
+
 // formulario de edición
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_pelicula = $_POST['id_pelicula'];
@@ -68,17 +96,29 @@ if (isset($_POST['eliminar_pelicula'])) {
     <img src="../imagenes/logopageblank.png" alt="Logo main" class="imglogo">
 
     <div class="topnav" id="myTopnav">
-        <a href="main.php">Inicio</a>
+        <a href="../main.php" >Inicio</a>
+        <a href="peliculas.html" >Peliculas</a>
         <a href="series.html">Series</a>
         <a href="estrenos.html">Estrenos</a>
         <a href="populares.html">Más Populares</a>
+        <a href="milista.html">Mi lista</a>
         <a href="php/logout.php" class="tableft">Cerrar Sesión
-        <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
+        <a class="tableft">
+            <?php echo $nombreUsuario?>
+        </a>
+        <?php
+            // Mostrar elementos adicionales si el usuario es administrador
+            if ($isAdmin) {
+                echo '<a href="peliculasAdmin.php" class="tableft">Modificar Peliculas</a>';
+                echo '<a href="agregarPeliculas.php" class="tableft">Modificar Peliculas</a>';
+            }
+        ?>
         <a href="javascript:void(0);" class="icon" onclick="NavTabResp()">
-            <i class="fa fa-bars"></i>
+          <i class="fa fa-bars"></i>
         </a>
-    </div>
+      </div>
 
     <h2 class="titulo-seccion">Editar Pelicula </h2>
 
