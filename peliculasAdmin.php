@@ -65,7 +65,7 @@
         </a>
       </div>
   
-        <h2 class="titulo-seccion">Peliculas ADMIN</h2>
+        <h2 class="titulo-seccion">Modificar Peliculas</h2>
 
         <form action="" method="get">
             <input type="text" name="q" id="busqueda" placeholder="Buscar Pelicula">
@@ -86,9 +86,9 @@
         ?>
 
         <?php if ($resultado->num_rows > 0) { ?>
-            <h3>Resultados de la búsqueda:</h3>
+            <h3 class="Texto_Busqueda">Resultados de la búsqueda:</h3>
         <?php } else { ?>
-            <p>No se encontraron resultados.</p>
+            <h3 class="Texto_Busqueda">No se encontraron resultados.</h3>
         <?php } ?>
 
         <div class="tabla_peliculas">
