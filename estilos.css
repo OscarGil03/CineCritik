@@ -336,3 +336,21 @@ opacity: 1;
   margin: 0 auto; 
   padding: 20px; 
 }
+
+/* Estilo para pagina Peliculas Admin */
+.tabla_peliculas {
+  background-color: white;
+  border: 1px solid #ddd; 
+  border-collapse: collapse; 
+  width: 100%;
+}
+
+.tabla_peliculas th, .tabla_peliculas td {
+  border: 1px solid #ddd; 
+  padding: 8px;
+  text-align: left;
+}
+
+.tabla_peliculas th {
+  background-color: #f2f2f2;
+}
