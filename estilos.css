@@ -24,13 +24,13 @@ header {
 }
 
 .imglogo{
-  width: 166; 
-  height: 50;
+  width: 166px; 
+  height: 50px;
 }
 
 .imgmovie{
-  width: 312; 
-  height: 426;
+  width: 312px; 
+  height: 426px;
 }
 
 
@@ -98,6 +98,13 @@ form label textarea {
 
 /* Fin estilo form agregar pelicula */
 
+form button.btn-guardar {
+  background: linear-gradient(to right, #1a6616, #1a9116);
+}
+
+form button.btn-eliminar {
+  background: linear-gradient(to right, #691d1d, #c42f2f);
+}
 
 form button {
   color: #fff;

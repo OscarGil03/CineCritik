@@ -122,25 +122,27 @@ if (isset($_POST['eliminar_pelicula'])) {
 
     <h2 class="titulo-seccion">Editar Pelicula </h2>
 
-
-    <form action="editar.php" method="post">
-        <input type="hidden" name="id_pelicula" value="<?php echo $fila['id_pelicula']; ?>">
-
-        <label for="nuevo_titulo">Nuevo Título:</label>
-        <input type="text" id="nuevo_titulo" name="nuevo_titulo" value="<?php echo $fila['titulo_p']; ?>" required>
-
-        
-        <br><label for="nueva_sinopsis">Nueva Sinopsis:</label>
-        <textarea id="nueva_sinopsis" name="nueva_sinopsis" required><?php echo $fila['sinopsis_p']; ?></textarea>
-
-
-        <button type="submit">Guardar Cambios</button>
-    </form>
+    <div class="cuadro-form">
+        <form action="editar.php" method="post">
+            <input type="hidden" name="id_pelicula" value="<?php echo $fila['id_pelicula']; ?>">
+            <h2 class="title">Nuevo Titulo:</h2>
+            <label for="nuevo_titulo">
+            <input type="text" id="nuevo_titulo" name="nuevo_titulo" value="<?php echo $fila['titulo_p']; ?>" required>
+            </label>
+            <div class='sinopsis-div'>
+                <h2 class="title">Nueva Sinopsis:</h2>
+                <label for="nueva_sinopsis">
+                <textarea id="nueva_sinopsis" name="nueva_sinopsis" required><?php echo $fila['sinopsis_p']; ?></textarea>
+                </label>
+            </div>
+            <button type="submit" class='btn-guardar'>Guardar Cambios</button>
+        </form>
+    </div>
 
     
     <form action="editar.php" method="post">
         <input type="hidden" name="id_pelicula" value="<?php echo $fila['id_pelicula']; ?>">
-        <button type="submit" name="eliminar_pelicula" onclick="return confirm('¿Estás seguro de que deseas eliminar esta película?')">Eliminar Película</button>
+        <button class="btn-eliminar" type="submit" name="eliminar_pelicula" onclick="return confirm('¿Estás seguro de que deseas eliminar esta película?')">Eliminar Película</button>
     </form>
 
 
