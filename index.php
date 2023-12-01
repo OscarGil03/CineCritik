@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION["usuario"])){
+        header("location: main.php");    
+    }
+
+?>
+
 <html>
     <head>
         <title>CineCrtik</title>

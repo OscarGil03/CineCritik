@@ -1,3 +1,20 @@
+<?php
+
+  session_start();
+  if (!isset($_SESSION['usuario'])){
+    echo'
+      <script>
+        alert("Por favor debes iniciar sesión");
+        window.location = "index.php";
+      </script>
+    ';
+    session_destroy();
+    die();
+  }
+
+
+?>
+
 <html>
 <head>
     <title>CINECRITIK</title>
@@ -20,7 +37,7 @@
         <a href="estrenos.html">Estrenos</a>
         <a href="populares.html">Más Populares</a>
         <a href="milista.html">Mi lista</a>
-        <a href="index.html" class="tableft">Cerrar Sesión
+        <a href="php/logout.php" class="tableft">Cerrar Sesión
           <i class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
         <a href="javascript:void(0);" class="icon" onclick="NavTabResp()">
