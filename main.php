@@ -12,6 +12,9 @@
     die();
   }
 
+  $nombreUsuario = $_SESSION['usuario'];
+  $idUsuario = $_SESSION['id'];
+  $isAdmin = $_SESSION['is_admin'];
 
 ?>
 
@@ -40,6 +43,16 @@
         <a href="php/logout.php" class="tableft">Cerrar Sesión
           <i class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
+        <a class="tableft">
+            <?php echo $nombreUsuario?>
+        </a>
+        <?php
+            // Mostrar elementos adicionales si el usuario es administrador
+            if ($isAdmin) {
+                echo '<a href="peliculasAdmin.php" class="tableft">Modificar Peliculas</a>';
+                // Agrega más elementos específicos para administradores si es necesario
+            }
+        ?>
         <a href="javascript:void(0);" class="icon" onclick="NavTabResp()">
           <i class="fa fa-bars"></i>
         </a>

@@ -12,7 +12,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = $conn->query($consulta);
 
     if ($resultado->num_rows == 1) {
+        // Obtener los datos del usuario
+        $usuarioDatos = $resultado->fetch_assoc();
+
+        // Almacenar en las variables de sesión
         $_SESSION['usuario'] = $usuario;
+        $_SESSION['id'] = $usuarioDatos['id_usuario'];
+        $_SESSION['is_admin'] = $usuarioDatos['is_admin'];
+
         header("Location: ../main.php");
     } else {
       
