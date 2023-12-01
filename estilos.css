@@ -371,27 +371,37 @@ opacity: 1;
 
 /* Estilo para pagina Peliculas Admin */
 .tabla_peliculas {
-  
   background-color: white;
-  border: 1px solid #ddd; 
-  border-collapse: collapse; 
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  max-width: 1100px; /* Ancho máximo de la tabla */
   width: 100%;
+  margin: 0 auto; /* Centrar la tabla */
+  display: flex; /* Aplicar flex */
+  flex-wrap: wrap; /* Envolver elementos cuando no haya suficiente espacio */
 }
 
-.tabla_peliculas th, .tabla_peliculas td {
-  border: 1px solid #ddd; 
+.tabla_peliculas th,
+.tabla_peliculas td {
+  border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
+  text-align: center; /* Centrar el texto horizontalmente */
+  vertical-align: middle; /* Centrar el texto verticalmente */
+  flex: 1; /* Hacer que los elementos ocupen un espacio igual dentro del flex container */
 }
 
 .tabla_peliculas th {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; 
+}
+
+.tabla_peliculas td:nth-child(3) {
+  width: 200px; /* Ajusta el ancho según tus necesidades */
 }
 
 .img_pelicula_admin{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .Texto_Busqueda{

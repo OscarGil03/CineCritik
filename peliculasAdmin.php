@@ -44,8 +44,8 @@
         <a href="main.php" >Inicio</a>
         <a href="peliculas.php" >Peliculas</a>
         <a href="series.php">Series</a>
-        <a href="estrenos.html">Estrenos</a>
-        <a href="populares.html">Más Populares</a>
+        <a href="estrenos.php">Estrenos</a>
+        <a href="populares.php">Más Populares</a>
         <a href="milista.php">Mi lista</a>
         <a href="php/logout.php" class="tableft">Cerrar Sesión
           <i class="fa fa-sign-out" aria-hidden="true"></i>
