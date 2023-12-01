@@ -8,7 +8,9 @@
     $registro = "INSERT INTO usuario(nombre, pass) 
               VALUES('$usuario', '$pass')";
 
-    $ejecutar = mysqli_query($conn, $registro);
+    $ejecutar = $conn->query($registro);
+    $conn->close();
+
 
     header("Location: ../index.html");
 ?>
