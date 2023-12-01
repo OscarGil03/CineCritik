@@ -50,7 +50,7 @@
             // Mostrar elementos adicionales si el usuario es administrador
             if ($isAdmin) {
                 echo '<a href="peliculasAdmin.php" class="tableft">Modificar Peliculas</a>';
-                // Agrega más elementos específicos para administradores si es necesario
+                echo '<a href="agregarPeliculas.php" class="tableft">Agregar Peliculas</a>';
             }
         ?>
         <a href="javascript:void(0);" class="icon" onclick="NavTabResp()">

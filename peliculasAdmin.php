@@ -55,8 +55,7 @@
         <h2 class="titulo-seccion">Peliculas ADMIN</h2>
 
         <form action="" method="get">
-            <label for="busqueda">Buscar:</label>
-            <input type="text" name="q" id="busqueda" placeholder="Ingrese su búsqueda">
+            <input type="text" name="q" id="busqueda" placeholder="Buscar Pelicula">
             <button type="submit">Buscar</button>
         </form>
 
@@ -83,7 +82,6 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Id_Pelicula</th>
                         <th>Título</th>
                         <th>Sinopsis</th>
                         <th>Imagen</th>
@@ -92,20 +90,19 @@
                 <tbody>
                     <?php while ($fila = $resultado->fetch_assoc()) { ?>
                         <tr>
-                            <td><?php echo $fila['id_pelicula']; ?></td>
+                            
                             <td><?php echo $fila['titulo_p']; ?></td>
                             <td><?php echo $fila['sinopsis_p']; ?></td>
                             <td><?php echo $fila['imagen_p']; ?></td>
                             <td>
-                                <a href="editar.php?id=<?php echo $fila['id_pelicula']; ?>">Editar</a>
-                                <a href="borrar.php?id=<?php echo $fila['id_pelicula']; ?>">Borrar</a>
+                                <a href="./php/editar.php?id=<?php echo $fila['id_pelicula']; ?>">Editar</a>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
         </div>  
-                 
+
         <?php
         $conn->close();
         ?>
