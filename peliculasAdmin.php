@@ -93,7 +93,7 @@
                             
                             <td><?php echo $fila['titulo_p']; ?></td>
                             <td><?php echo $fila['sinopsis_p']; ?></td>
-                            <td><?php echo $fila['imagen_p']; ?></td>
+                            <td><img src="<?php echo substr($fila['imagen_p'],3) ?>" alt="" srcset="" class="img_pelicula_admin"></td>
                             <td>
                                 <a href="./php/editar.php?id=<?php echo $fila['id_pelicula']; ?>">Editar</a>
                             </td>
