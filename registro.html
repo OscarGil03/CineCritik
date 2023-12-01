@@ -6,7 +6,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="icon" href="./imagenes/logopag.png">
         <script src="app.js"></script>
     </head>
     <body>
@@ -15,17 +14,15 @@
         </header>
 
         <div class="cuadro-form">
-            <form action="php/login.php" method="post">
-                <h1 class="title">INICIA SESIÓN</h1>
+            <form action="php/registro_usuario.php" method="POST">
+                <h1 class="title">REGISTRO USUARIO</h1>
                 <label for="usuario">
-                    <input placeholder="Usuario" type="text" id="usuario" name="usuario">
+                    <input placeholder="Usuario" type="text" name="usuario">
                 </label>
                 <label for="pass">
-                    <input placeholder="Contraseña" type="password" id="pass" name="contraseña">
+                    <input placeholder="Contraseña" type="password" name="pass">
                 </label>
-                <button id="boton" type="submit" >Ingresar</button>
-                <p class="registro-text">Aún no tienes sesión?</p>
-                <button type="button" onclick="window.location.href='registro.html'">Registrarse</button>
+                <button id="boton" type="submit">Registrar</button>
             </form>
         </div>
     </body>
