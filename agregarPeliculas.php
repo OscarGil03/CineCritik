@@ -56,7 +56,7 @@
         <h2 class="titulo-seccion">Agregar Peliculas</h2>
 
         <div class="cuadro-form">
-            <form action="php/agregar.php" method="POST">
+            <form action="php/agregar.php" method="POST" enctype="multipart/form-data">
                 <h2 class="title">Nombre Pelicula:</h2>
                 <label for="nombre-p">
                     <input placeholder="Nombre Pelicula" type="text" id="nombre-p" name="nombre-p">
