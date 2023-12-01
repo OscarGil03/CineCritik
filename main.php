@@ -34,8 +34,8 @@
     <img src="./imagenes/logopageblank.png" alt="Logo main" class="imglogo">
 
     <div class="topnav" id="myTopnav">
-        <a href="peliculas.html" >Peliculas</a>
-        <a href="series.html">Series</a>
+        <a href="peliculas.php" >Peliculas</a>
+        <a href="series.php">Series</a>
         <a href="estrenos.html">Estrenos</a>
         <a href="populares.html">Más Populares</a>
         <a href="milista.php">Mi lista</a>
